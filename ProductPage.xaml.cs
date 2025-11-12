@@ -22,7 +22,11 @@ namespace Ишбулатов41размер
     {
         public ProductPage()
         {
+           
             InitializeComponent();
+            var currentProduct = Ishbulatov41Entities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProduct;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
